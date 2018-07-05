@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-121116784-1"></script>
+	<script>
+  		window.dataLayer = window.dataLayer || [];
+  		function gtag(){dataLayer.push(arguments);}
+  		gtag('js', new Date());
+
+		gtag('config', 'UA-121116784-1');
+	</script>
+
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		.logo {
+    		display: block;
+    		margin-left: auto;
+    		margin-right: auto;
+    		width: 25%;
+		}
+		html,body {
+			margin: 0;
+			padding: 0;
+			height: 100%;
+			background-color: black;
+		}
+		#container {
+			min-height: 100%;
+			height: 100%;
+			position: relative;
+		}
+
+		#header {
+			padding: 10px;
+		}
+
+		#body {
+			padding: 10px;
+			padding-bottom: 60px;
+		}
+		#nav {
+			color: grey;
+			text-align: center;
+		}
+		ul {
+			list-style: none;
+		}
+		li {
+			display: inline;
+			padding: 10px;
+			font-size: 25px;
+			font-family: serif;
+		}
+		#enter {
+			font-size: 25px;
+			font-family: serif;
+			color: grey;
+		}
+		#footer {
+			position: absolute;		
+			bottom: 0;
+			width: 100%;
+			height: 120px;
+		}
+		#LI-icon {
+			position: absolute;
+			display: block;
+			right: 0px;
+			width: 40px;
+			padding: 1%;
+		}
+		#nav-dropdown{
+				display: none;
+				color: grey;
+		}
+
+		@media only screen and (max-width: 768px){
+			.logo {
+				display: block;
+    			margin-left: auto;
+    			margin-right: auto;
+    			width: 50%;
+			}
+			#LI-icon {
+				width: 50px;
+			}
+			#nav {
+				display: none;
+			}
+
+			#nav-dropdown{
+				display: inline;
+			}
+
+			#toggle {
+				/*width: 25%;
+				height: 10%;*/
+				color: grey;
+				background-color: black;
+				border: none;
+				display: block;
+    			margin-left: auto;
+    			margin-right: auto;
+    			padding: 10px;
+				font-size: 25px;
+				font-family: serif;
+				text-align: center;
+			}
+			li {
+			display: block;
+			text-align: center;
+			}
+
+		}
+	</style>
+
+
+</head>
+<body>
+	<div id="container">
+		<div id="header"></div>
+		<div id="body">
+			<a href="home.html"><img class="logo" src="raven.png" alt="logo"></a>
+		</div>
+		<div id="footer">
+			<div>
+				<a class="LI-simple-link" href='https://www.linkedin.com/company/raven-technical-solutions/?trk=profile-badge'><img id="LI-icon" class="LI" src="Linkedin.png"></a>
+			</div>
+		</div>
+	</div>
+
+
+	<script type="text/javascript">
+		document.getElementsByTagName("BODY")[0].onresize = function() {windowSizeFunction()};
+		var size = 0;
+
+		function windowSizeFunction(){
+			size = window.innerWidth;
+			
+
+			if (size <= 768) { // smartphones
+				//document.getElementById("demo").style.color = "yellow";	
+				//document.getElementById("nav").style.display = "none";
+				//docuemtn.getElementById("nav-dropdown").style.display = "inline";
+				document.getElementById("LI-icon").style.width = "50px";
+				//document.getElementById("dropdown").style.display = "none";
+				//document.getElementsByClassName("logo")[0].style.width = "75%";
+			} else if (size <= 992) { // small devices, tablets
+				//document.getElementById("demo").style.color = "green";
+				document.getElementById("LI-icon").style.width = "40px";
+				//document.getElementsByClassName("logo")[0].style.width = "35%";
+			} else if (size <= 1200) { // medium devices
+				//document.getElementById("demo").style.color = "red";
+				document.getElementById("LI-icon").style.width = "40px";
+				//document.getElementsByClassName("logo")[0].style.width = "30%";
+			} else { // large devices
+				//document.getElementById("demo").style.color = "blue";
+				document.getElementById("LI-icon").style.width = "40px";
+				//document.getElementById("nav").style.display = "inline";
+				//document.getElementsByClassName("logo")[0].style.width = "25%";
+			}
+		}
+		function dropdown(){
+			var element = document.getElementById("dropdown");
+			style = window.getComputedStyle(element);
+			display = style.getPropertyValue('display');
+			console.log(display);
+			if (display == "none") {
+				document.getElementById("dropdown").style.display = "block";
+			} else {
+				document.getElementById("dropdown").style.display = "none";
+			}
+
+		}
+	</script>
+</body>
+</html>
