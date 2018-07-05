@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-121116784-1"></script>
+	<script>
+  		window.dataLayer = window.dataLayer || [];
+  		function gtag(){dataLayer.push(arguments);}
+  		gtag('js', new Date());
+
+		gtag('config', 'UA-121116784-1');
+	</script>
+
+	<link rel="icon" type="text/css" href="raven-icon.png">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		a {
+			text-decoration: none;
+			color: grey;
+			padding: 10px;
+			font-size: 25px;
+			float: right;
+		}
+		html,body {
+			margin: 0;
+			padding: 0;
+			height: 100%;
+		}
+		#header {
+			padding: 10px;
+			background-color: black;
+			min-height: 7%
+		}
+		#b {
+			padding: 10px;
+			padding-bottom: 60px;
+			height: 72%;
+		}
+		#body {
+			display: grid;
+			grid-template-columns: 10% 80% 10%;
+			padding: 20px;
+		}
+		#main {
+			display: grid;
+			grid-template-columns: 25% 75%;
+			grid-template-rows: 10% 80% 10%;
+		}
+		#nav {
+			color: grey;
+			background-color: black;
+		}
+		#border-top {
+			background: linear-gradient(black, red);
+			min-height: 1%;
+			width: 100%;
+		}
+		#border-bottom {
+			background: linear-gradient(red, black);
+			min-height: 1%;
+			width: 100%;
+		}
+		ul {
+			list-style: none;
+		}
+		li {
+			display: inline;
+			padding: 10px;
+			font-size: 25px;
+			font-family: serif;
+			align-items: right;
+		}
+		#logo {
+			font-size: 35px;
+		}
+		#footer {
+			position: absolute;		
+			bottom: 0;
+			width: 100%;
+			height: 10%;
+			background-color: black;
+		}
+		#LI-icon {
+			position: absolute;
+			display: block;
+			right: 0px;
+			width: 40px;
+			padding: 1%;
+		}
+		#nav-dropdown{
+			display: none;
+			color: grey;
+		}
+		#head-photo {
+			min-height: 30%;
+			max-width: 50%;
+			background-image: url('conference-room-daytime-employees.jpg');
+			background-size: cover;
+			display: block;
+			margin-right: auto;
+			margin-left: auto;
+			box-shadow: 0 4px 8px grey;
+		}
+
+		@media only screen and (max-width: 768px){
+			#LI-icon {
+				width: 50px;
+			}
+			#nav {
+				display: none;
+			}
+
+			#nav-dropdown{
+				display: inline;
+			}
+			#nav-dropdown-list{
+				display: inline;
+			}
+
+			#toggle {
+				/*width: 25%;
+				height: 10%;*/
+				color: grey;
+				background-color: black;
+				border: none;
+				display: block;
+    			margin-left: auto;
+    			margin-right: auto;
+    			padding: 10px;
+				font-size: 25px;
+				font-family: serif;
+				text-align: center;
+			}
+			li {
+				display: block;
+				text-align: center;
+			}
+
+		}
+	</style>
+
+
+</head>
+<body>
+	<div id="header">
+		<div id="nav">
+			<ul>					
+				<a href="home.html" style="float: left"><li id="logo">raven</li></a>
+				<a href="contact.html"><li>contact</li></a>
+				<a href="careers.html"><li>careers</li></a>	
+				<a href="csr.html"><li>corporate responsibility</li></a>
+				<a href="capabilities.html"><li>capabilities</li></a>				
+			</ul>
+		</div>
+		<div id="nav-dropdown">
+			<!--<button style = (background-color="white")></button>-->
+			<ul>
+				<li id="nav-dropdown-list">raven</li>
+				<!--<li id="nav-dropdown-list"><button id ="toggle" onclick="dropdown()"><img id="menu" src="Menu.png"/></button></li>-->
+				<li id="nav-dropdown-list" style="float: right" onclick="dropdown()"><img id="menu" src="Menu.png"/></li>
+			</ul>
+			<ul id="dropdown" style="display: none">
+				<li>capabilities</li>
+				<li>corporate responsibility</li>
+				<li>careers</li>
+				<li>contact</li>
+			</ul>
+		</div>
+	</div>
+
+	<div id="border-top"></div>
+
+	<div id=b>
+		<div id="head-photo"></div>
+		<div id="body">
+			<div id="left-column"></div>
+			<div id="main">
+				<div></div>
+				<div></div>
+				<div></div>
+				<div id="main-content">
+					<b>
+						It takes incredible innovation, teamwork and an entrepreneurial spirit to be L3. L3 was built by combining the talents and ideas of people from across our company to deliver the best solutions for our customers.
+					</b>
+					<p>
+						L3's decentralized operating structure and depth of talent and capabilities set us apart from our competition. These discriminators enable us to respond quickly and decisively to our customers challenges, while utilizing company-wide resources and expertise to meet their needs.
+					</p>
+					<p>
+						Every day, our employees around the world contribute innovative ideas to expand L3's leadership in Electronic Systems, Aerospace Systems, Communication Systems and Sensor Systems. L3 employees are our most valuable resource—the embodiment of how we deliver unparalleled service to our customers.
+					</p>
+				</div>
+				<div></div>
+				<div></div>
+			</div>
+			<div id="right-column"></div>
+		</div>
+	</div>
+
+		
+	<div id="border-bottom"></div>
+	<div id="footer">
+		<div>
+			<a class="LI-simple-link" href='https://www.linkedin.com/company/raven-technical-solutions/?trk=profile-badge'><img id="LI-icon" class="LI" src="Linkedin.png"></a>
+		</div>
+	</div>
+
+
+
+	<script type="text/javascript">
+		document.getElementsByTagName("BODY")[0].onresize = function() {windowSizeFunction()};
+		var size = 0;
+
+		function windowSizeFunction(){
+			size = window.innerWidth;
+			
+
+			if (size <= 768) { // smartphones
+				//document.getElementById("demo").style.color = "yellow";	
+				//document.getElementById("nav").style.display = "none";
+				//docuemtn.getElementById("nav-dropdown").style.display = "inline";
+				document.getElementById("LI-icon").style.width = "50px";
+				//document.getElementById("dropdown").style.display = "none";
+				//document.getElementsByClassName("logo")[0].style.width = "75%";
+			} else if (size <= 992) { // small devices, tablets
+				//document.getElementById("demo").style.color = "green";
+				document.getElementById("LI-icon").style.width = "40px";
+				//document.getElementsByClassName("logo")[0].style.width = "35%";
+			} else if (size <= 1200) { // medium devices
+				//document.getElementById("demo").style.color = "red";
+				document.getElementById("LI-icon").style.width = "40px";
+				//document.getElementsByClassName("logo")[0].style.width = "30%";
+			} else { // large devices
+				//document.getElementById("demo").style.color = "blue";
+				document.getElementById("LI-icon").style.width = "40px";
+				//document.getElementById("nav").style.display = "inline";
+				//document.getElementsByClassName("logo")[0].style.width = "25%";
+			}
+		}
+		function dropdown(){
+			var element = document.getElementById("dropdown");
+			style = window.getComputedStyle(element);
+			display = style.getPropertyValue('display');
+			console.log(display);
+			if (display == "none") {
+				document.getElementById("dropdown").style.display = "block";
+			} else {
+				document.getElementById("dropdown").style.display = "none";
+			}
+
+		}
+	</script>
+</body>
+</html>
