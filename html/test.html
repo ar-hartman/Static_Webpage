@@ -16,21 +16,28 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-<body onload="setPositions()" onresize="setPositions()">
+<body>
 	<div id="container">
 		<div id="header">
-			<div id="nav">
-				<ul>					
-					<a href="home.html" style="float: left"><li id="logo">raven</li></a>
-					<a href="contact.html"><li>contact</li></a>
-					<a href="careers.html"><li>careers</li></a>	
-					<a href="csr.html"><li>corporate responsibility</li></a>
-					<a href="capabilities.html"><li>capabilities</li></a>				
-				</ul>
-			</div>
+			<!--	
+				This section represents the navigation bar for larger screens
+			-->
+			<table id="nav-table-large">
+				<tr>
+					<td id="table-home"><a id="home" href="home.html">raven</a></td>
+					<td id="table-spacer"></td>
+					<td class="table-link"><a id="link" href="capabilities.html">capabilities</a></td>
+					<td class="table-link"><a id="link" href="csr.html">corporate responsibility</a></td>
+					<td class="table-link"><a id="link" href="careers.html">careers</a></td>
+					<td class="table-link"><a id="link" href="contact.html">contact</a></td>
+				</tr>
+			</table>
+			<!--
+				This section represents the navigation bar for smaller/mobile screens
+			-->	
 			<table id="nav-table">
 				<tr>
-					<td id="left-table"><a href="home.html">raven</a></td>
+					<td id="left-table"><a id="home" href="home.html">raven</a></td>
 					<td></td>
 					<td id="right-table"><img id="menu" src="../images/Menu.png" onclick="dropdown()"/></td>
 				</tr>
@@ -69,82 +76,12 @@
 		<div id="border-bottom"></div>
 		<div id="footer">
 			<div>
-				<a class="LI-simple-link" href='https://www.linkedin.com/company/raven-technical-solutions/?trk=profile-badge'><img id="LI-icon" class="LI" src="../images/Linkedin.png"></a>
+				<a class="LI-simple-link" href='https://www.linkedin.com/company/raven-technical-solutions/'><img id="LI-icon" class="LI" src="../images/Linkedin.png"></a>
 			</div>
 		</div>
 	</div>
 
 
-	<script type="text/javascript">
-		document.getElementsByTagName("BODY")[0].onload = function() {setPositions()};
-		document.getElementsByTagName("BODY")[0].onresize = function() {windowSizeFunction()};
-		window.addEventListener("resize", function(){
-			setPositions();
-		})
-
-
-		var size = 0;
-
-		function windowSizeFunction(){
-			size = window.innerWidth;
-			
-
-			if (size <= 768) { // smartphones
-				document.getElementById("LI-icon").style.width = "50px";
-			} else if (size <= 992) { // small devices, tablets
-				document.getElementById("LI-icon").style.width = "40px";
-			} else if (size <= 1200) { // medium devices
-				document.getElementById("LI-icon").style.width = "40px";
-			} else { // large devices
-				document.getElementById("LI-icon").style.width = "40px";
-			}
-		}
-		function dropdown(){
-			var number = document.getElementsByClassName("nav-drop").length;
-			var element = document.getElementsByClassName("nav-drop")[0];
-			style = window.getComputedStyle(element);
-			display = style.getPropertyValue('display');
-			if (display == "none") {
-				for (i = 0; i < number; i++){
-					document.getElementsByClassName("nav-drop")[i].style.display = "table-row";
-				}
-				positionTopBorder();
-				adjustBody();
-			} else {
-				for (i = 0; i < number; i++){
-					document.getElementsByClassName("nav-drop")[i].style.display = "none";
-				}
-				positionTopBorder();
-				adjustBody();
-			}
-		}
-		function setPositions(){
-			positionTopBorder();
-			adjustBody();
-			positionBottomBorder();
-		}
-		function positionTopBorder(){
-			var headHeight = document.getElementById('header').clientHeight;
-			console.log(headHeight);
-			document.getElementById("border-top").style.top = headHeight + "px";
-		}
-		function positionBottomBorder(){
-			var footHeight = document.getElementById('footer').clientHeight;
-			document.getElementById("border-bottom").style.bottom = footHeight + "px";
-		}
-		function adjustBody(){
-			var windowHeight = document.getElementById('container').clientHeight;
-			console.log(windowHeight + " window height");
-			var headHeight = document.getElementById('header').clientHeight;
-			var topBorderHeight = document.getElementById('border-top').clientHeight;
-			var bottomBorderHeight = document.getElementById('border-bottom').clientHeight;
-			var footHeight = document.getElementById('footer').clientHeight;
-
-			var newBodyHeight = windowHeight - headHeight - topBorderHeight - bottomBorderHeight - footHeight;
-			console.log(newBodyHeight + " new nody height");
-			document.getElementById("b").style.height = newBodyHeight + "px";
-			document.getElementById("b").style.top = headHeight + topBorderHeight + "px";
-		}
-	</script>
+	<script src="../js/layoutBehavior.js"></script>
 </body>
 </html>

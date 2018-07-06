@@ -14,37 +14,39 @@ html,body {
 }
 #header {
 	position: absolute;
-	top: 0;
 	width: 100%;
-	padding: 10px;
+	min-height: 10%;
+	top: 0;
 	background-color: black;
-	min-height: 7%
+	
 }
 #border-top {
 	position: absolute;
+	width: 100%;
+	min-height: 1%;
 	top: 10%;
 	background: linear-gradient(black, red);
-	min-height: 1%;
-	width: 100%;
 }
 #b {
 	position: absolute;
 	top: 11%;
 	width: 100%;
-	min-height: 72%;
+	min-height: 68%;
+	overflow-y: auto;
+	overflow-x: hidden;
 }
 #border-bottom {
 	position: absolute;
 	width: 100%;
-	bottom: 11%;
-	background: linear-gradient(red, black);
 	min-height: 1%;
+	bottom: 11%;
+	background: linear-gradient(red, black);	
 }
 #footer {
 	position: absolute;		
-	bottom: 0;
 	width: 100%;
 	min-height: 10%;
+	bottom: 0;
 	background-color: black;
 }
 #main {
@@ -56,26 +58,10 @@ html,body {
 	display: grid;
 	grid-template-columns: 10% 80% 10%;
 	padding: 20px;
-	overflow-y: auto;
-	overflow-x: none; 
 }
 #nav {
 	color: grey;
 	background-color: black;
-}
-ul {
-	list-style: none;
-}
-li {
-	display: inline;
-	padding: 10px;
-	font-size: 25px;
-	font-family: serif;
-	align-items: right;
-	float: right;
-}
-#logo {
-	font-size: 35px;
 }
 
 #LI-icon {
@@ -85,7 +71,12 @@ li {
 	width: 40px;
 	padding: 1%;
 }
-
+#home {
+	font-size: 25px;
+}
+#link {
+	font-size: 20px;
+}
 .nav-drop{
 	display: none;
 }
@@ -99,28 +90,48 @@ li {
 	margin-left: auto;
 	box-shadow: 0 4px 8px grey;
 }
-table {
+#nav-table-large {
+	width: 100%;
+	position: relative;
+	display: table;
+}
+#nav-table {
 	width: 100%;
 	display: none;
 }
-td {
+#table-home {
+	width: 10%;
 	text-align: center;
-	vertical-align: middle;
 }
+#table-spacer {
+	width: 40%;
+}
+.table-link {
+	width: 12.5%;
+	text-align: center;
+}
+
 @media only screen and (max-width: 768px){
 	#LI-icon {
 		width: 50px;
 	}
-	#nav {
+	#nav-table-large {
 		display: none;
 	}
-	table {
+	#nav-table {
 		display: table;
+	}
+	td {
+		text-align: center;
+		vertical-align: top;
 	}
 	#left-table{
 		width: 25%;
+		padding-bottom: 10px;
 	}
 	#right-table{
 		width: 25%;
+		padding-bottom: 10px;
 	}
+
 }
