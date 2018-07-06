@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-121116784-1"></script>
+	<script>
+  		window.dataLayer = window.dataLayer || [];
+  		function gtag(){dataLayer.push(arguments);}
+  		gtag('js', new Date());
+
+		gtag('config', 'UA-121116784-1');
+	</script>
+
+	<link rel="stylesheet" type="text/css" href="../css/main.css">
+	<link rel="icon" type="text/css" href="../images/raven-icon.png">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div id="container">
+		<div id="header">
+			<div id="nav">
+				<ul>					
+					<a href="home.html" style="float: left"><li id="logo">raven</li></a>
+					<a href="contact.html"><li>contact</li></a>
+					<a href="careers.html"><li>careers</li></a>	
+					<a href="csr.html"><li>corporate responsibility</li></a>
+					<a href="capabilities.html"><li>capabilities</li></a>				
+				</ul>
+			</div>
+			<table>
+				<tr>
+					<td id="left-table"><a href="home.html">raven</a></td>
+					<td></td>
+					<td id="right-table"><img id="menu" src="../images/Menu.png" onclick="dropdown()"/></td>
+				</tr>
+				<tr class="nav-drop">
+					<td id="left-table"></td>>
+					<td><a id="link" href="capabilities.html">capabilities</a></td>>
+					<td id="right-table"></td>
+				</tr>
+				<tr class="nav-drop">
+					<td id="left-table"></td>
+					<td><a id="link" href="csr.html">corporate responsibility</a></td>
+					<td id="right-table"></td>
+				</tr>
+				<tr class="nav-drop">
+					<td id="left-table"></td>
+					<td><a id="link" href="careers.html">careers</a></td>
+					<td id="right-table"></td>
+				</tr>
+				<tr class="nav-drop">
+					<td id="left-table"></td>
+					<td><a id="link" href="contact.html">contact</a></td>
+					<td id="right-table"></td>
+				</tr>
+			</table>
+		</div>
+
+		<div id="border-top"></div>
+
+		<div id="b">
+			<div id="body">
+				something
+			</div>
+		</div>
+
+			
+		<div id="border-bottom"></div>
+		<div id="footer">
+			<div>
+				<a class="LI-simple-link" href='https://www.linkedin.com/company/raven-technical-solutions/?trk=profile-badge'><img id="LI-icon" class="LI" src="../images/Linkedin.png"></a>
+			</div>
+		</div>
+	</div>
+
+
+	<script type="text/javascript">
+		document.getElementsByTagName("BODY")[0].onresize = function() {windowSizeFunction()};
+		var size = 0;
+
+		function windowSizeFunction(){
+			size = window.innerWidth;
+			
+
+			if (size <= 768) { // smartphones
+				document.getElementById("LI-icon").style.width = "50px";
+			} else if (size <= 992) { // small devices, tablets
+				document.getElementById("LI-icon").style.width = "40px";
+			} else if (size <= 1200) { // medium devices
+				document.getElementById("LI-icon").style.width = "40px";
+			} else { // large devices
+				document.getElementById("LI-icon").style.width = "40px";
+			}
+		}
+		function dropdown(){
+			var number = document.getElementsByClassName("nav-drop").length;
+			var element = document.getElementsByClassName("nav-drop")[0];
+			style = window.getComputedStyle(element);
+			display = style.getPropertyValue('display');
+			if (display == "none") {
+				for (i = 0; i < number; i++){
+					document.getElementsByClassName("nav-drop")[i].style.display = "table-row";
+				}
+			} else {
+				for (i = 0; i < number; i++){
+					document.getElementsByClassName("nav-drop")[i].style.display = "none";
+				}
+			}
+		}
+	</script>
+</body>
+</html>
