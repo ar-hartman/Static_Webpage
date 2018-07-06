@@ -10,135 +10,10 @@
 
 		gtag('config', 'UA-121116784-1');
 	</script>
-
-	<link rel="icon" type="text/css" href="raven-icon.png">
+	<link rel="stylesheet" type="text/css" href="../css/main.css">
+	<link rel="icon" type="text/css" href="../images/raven-icon.png">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<style>
-		a {
-			text-decoration: none;
-			color: grey;
-			padding: 10px;
-			font-size: 25px;
-			float: right;
-		}
-		html,body {
-			margin: 0;
-			padding: 0;
-			height: 100%;
-		}
-		#header {
-			padding: 10px;
-			background-color: black;
-			min-height: 7%
-		}
-		#b {
-			padding: 10px;
-			padding-bottom: 60px;
-			height: 72%;
-		}
-		#body {
-			display: grid;
-			grid-template-columns: 10% 80% 10%;
-			padding: 20px;
-		}
-		#main {
-			display: grid;
-			grid-template-columns: 25% 75%;
-			grid-template-rows: 10% 80% 10%;
-		}
-		#nav {
-			color: grey;
-			background-color: black;
-		}
-		#border-top {
-			background: linear-gradient(black, red);
-			min-height: 1%;
-			width: 100%;
-		}
-		#border-bottom {
-			background: linear-gradient(red, black);
-			min-height: 1%;
-			width: 100%;
-		}
-		ul {
-			list-style: none;
-		}
-		li {
-			display: inline;
-			padding: 10px;
-			font-size: 25px;
-			font-family: serif;
-			align-items: right;
-		}
-		#logo {
-			font-size: 35px;
-		}
-		#footer {
-			position: absolute;		
-			bottom: 0;
-			width: 100%;
-			height: 10%;
-			background-color: black;
-		}
-		#LI-icon {
-			position: absolute;
-			display: block;
-			right: 0px;
-			width: 40px;
-			padding: 1%;
-		}
-		#nav-dropdown{
-			display: none;
-			color: grey;
-		}
-		#head-photo {
-			min-height: 30%;
-			max-width: 50%;
-			background-image: url('conference-room-daytime-employees.jpg');
-			background-size: cover;
-			display: block;
-			margin-right: auto;
-			margin-left: auto;
-			box-shadow: 0 4px 8px grey;
-		}
-
-		@media only screen and (max-width: 768px){
-			#LI-icon {
-				width: 50px;
-			}
-			#nav {
-				display: none;
-			}
-
-			#nav-dropdown{
-				display: inline;
-			}
-			#nav-dropdown-list{
-				display: inline;
-			}
-
-			#toggle {
-				/*width: 25%;
-				height: 10%;*/
-				color: grey;
-				background-color: black;
-				border: none;
-				display: block;
-    			margin-left: auto;
-    			margin-right: auto;
-    			padding: 10px;
-				font-size: 25px;
-				font-family: serif;
-				text-align: center;
-			}
-			li {
-				display: block;
-				text-align: center;
-			}
-
-		}
-	</style>
 
 
 </head>
@@ -154,17 +29,15 @@
 			</ul>
 		</div>
 		<div id="nav-dropdown">
-			<!--<button style = (background-color="white")></button>-->
 			<ul>
-				<li id="nav-dropdown-list">raven</li>
-				<!--<li id="nav-dropdown-list"><button id ="toggle" onclick="dropdown()"><img id="menu" src="Menu.png"/></button></li>-->
-				<li id="nav-dropdown-list" style="float: right" onclick="dropdown()"><img id="menu" src="Menu.png"/></li>
+				<a href="home.html" style="float: left"><li id="nav-dropdown-list">raven</li></a>
+				<li style="float: right" onclick="dropdown()"><img id="menu" src="../images/Menu.png"/></li>
 			</ul>
 			<ul id="dropdown" style="display: none">
-				<li>capabilities</li>
-				<li>corporate responsibility</li>
-				<li>careers</li>
-				<li>contact</li>
+				<li id="nav-dropdown-list" ><a id="nav-dropdown-link" href="capabilities.html">capabilities</a></li>
+				<li id="nav-dropdown-list" ><a id="nav-dropdown-link" href="csr.html">corporate responsibility</a></li>
+				<li id="nav-dropdown-list" ><a id="nav-dropdown-link" href="careers.html">careers</a></li>
+				<li id="nav-dropdown-list" ><a id="nav-dropdown-link" href="contact.html">contact</a></li>
 			</ul>
 		</div>
 	</div>
@@ -201,7 +74,7 @@
 	<div id="border-bottom"></div>
 	<div id="footer">
 		<div>
-			<a class="LI-simple-link" href='https://www.linkedin.com/company/raven-technical-solutions/?trk=profile-badge'><img id="LI-icon" class="LI" src="Linkedin.png"></a>
+			<a class="LI-simple-link" href='https://www.linkedin.com/company/raven-technical-solutions/?trk=profile-badge'><img id="LI-icon" class="LI" src="../images/Linkedin.png"></a>
 		</div>
 	</div>
 

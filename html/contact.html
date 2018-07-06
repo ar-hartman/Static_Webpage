@@ -11,175 +11,56 @@
 		gtag('config', 'UA-121116784-1');
 	</script>
 
-
+	<link rel="stylesheet" type="text/css" href="../css/main.css">
+	<link rel="icon" type="text/css" href="../images/raven-icon.png">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<style>
-		a {
-			text-decoration: none;
-			color: grey;
-			padding: 10px;
-			font-size: 25px;
-			float: right;
-		}
-		html,body {
-			margin: 0;
-			padding: 0;
-			height: 100%;
-		}
-		#containter {
-			position: relative;
-		}
-		#header {
-			position: absolute;
-			padding: 10px;
-			background-color: black;
-			min-height: 7%;
-			max-height: 7%;
-			min-width: 100%;
-			top: 0;
-		}
 
-		#body {
-			position: absolute;
-			padding: 10px;
-			padding-bottom: 60px;
-			min-height: 72%;
-			max-height: 72%;
-			min-width: 100%;
-			top: 10%;
-		}
-		#nav {
-			color: grey;
-			background-color: black;
-		}
-		#border-top {
-			position: absolute;
-			background: linear-gradient(black, red);
-			min-height: 1%;
-			max-height: 1%;
-			width: 100%;
-			top: 9%;
-		}
-		#border-bottom {
-			position: absolute;
-			background: linear-gradient(red, black);
-			min-height: 1%;
-			max-height: 1%;
-			width: 100%;
-			top: 89%;
-		}
-		ul {
-			list-style: none;
-		}
-		li {
-			display: inline;
-			padding: 10px;
-			font-size: 25px;
-			font-family: serif;
-			align-items: right;
-		}
-		#footer {
-			position: absolute;		
-			bottom: 0;
-			width: 100%;
-			height: 10%;
-			background-color: black;
-		}
-		#LI-icon {
-			position: absolute;
-			display: block;
-			right: 0px;
-			width: 40px;
-			padding: 1%;
-		}
-		#nav-dropdown{
-				display: none;
-				color: grey;
-		}
-
-		@media only screen and (max-width: 768px){
-			#LI-icon {
-				width: 50px;
-			}
-			#nav {
-				display: none;
-			}
-
-			#nav-dropdown{
-				display: inline;
-			}
-			#nav-dropdown-list{
-				display: inline;
-			}
-
-			#toggle {
-				/*width: 25%;
-				height: 10%;*/
-				color: grey;
-				background-color: black;
-				border: none;
-				display: block;
-    			margin-left: auto;
-    			margin-right: auto;
-    			padding: 10px;
-				font-size: 25px;
-				font-family: serif;
-				text-align: center;
-			}
-			li {
-				display: block;
-				text-align: center;
-			}
-
-		}
-	</style>
 
 
 </head>
 <body>
-	<div id="container">
-		<div id="header">
-			<div id="nav">
-				<ul>					
-					<a href="home.html" style="float: left"><li id="logo">raven</li></a>
-					<a href="contact.html"><li>contact</li></a>
-					<a href="careers.html"><li>careers</li></a>	
-					<a href="csr.html"><li>corporate responsibility</li></a>
-					<a href="capabilities.html"><li>capabilities</li></a>				
-				</ul>
-			</div>
-			<div id="nav-dropdown">
-				<!--<button style = (background-color="white")></button>-->
-				<ul>
-					<li id="nav-dropdown-list">raven</li>
-					<!--<li id="nav-dropdown-list"><button id ="toggle" onclick="dropdown()"><img id="menu" src="Menu.png"/></button></li>-->
-					<li id="nav-dropdown-list" style="float: right" onclick="dropdown()"><img id="menu" src="Menu.png"/></li>
-				</ul>
-				<ul id="dropdown" style="display: none">
-					<li>capabilities</li>
-					<li>corporate responsibility</li>
-					<li>careers</li>
-					<li>contact</li>
-				</ul>
-			</div>
+	<div id="header">
+		<div id="nav">
+			<ul>					
+				<a href="home.html" style="float: left"><li id="logo">raven</li></a>
+				<a href="contact.html"><li>contact</li></a>
+				<a href="careers.html"><li>careers</li></a>	
+				<a href="csr.html"><li>corporate responsibility</li></a>
+				<a href="capabilities.html"><li>capabilities</li></a>				
+			</ul>
 		</div>
-
-		<div id="border-top"></div>
-
-
-		<div id="body">
-			
-		</div>
-
-
-			
-		<div id="border-bottom"></div>
-		<div id="footer">
-			<div>
-				<a class="LI-simple-link" href='https://www.linkedin.com/company/raven-technical-solutions/?trk=profile-badge'><img id="LI-icon" class="LI" src="Linkedin.png"></a>
-			</div>
+		<div id="nav-dropdown">
+			<!--<button style = (background-color="white")></button>-->
+			<ul>
+				<a href="home.html" style="float: left"><li id="nav-dropdown-list">raven</li></a>
+				<!--<li id="nav-dropdown-list"><button id ="toggle" onclick="dropdown()"><img id="menu" src="Menu.png"/></button></li>-->
+				<li id="nav-dropdown-list" style="float: right" onclick="dropdown()"><img id="menu" src="../images/Menu.png"/></li>
+			</ul>
+			<ul id="dropdown" style="display: none">
+				<li>capabilities</li>
+				<li>corporate responsibility</li>
+				<li>careers</li>
+				<li>contact</li>
+			</ul>
 		</div>
 	</div>
+
+	<div id="border-top"></div>
+
+	<div id="b">
+		<div id="body">
+		
+		</div>
+	</div>
+
+		
+	<div id="border-bottom"></div>
+	<div id="footer">
+		<div>
+			<a class="LI-simple-link" href='https://www.linkedin.com/company/raven-technical-solutions/?trk=profile-badge'><img id="LI-icon" class="LI" src="../images/Linkedin.png"></a>
+		</div>
+	</div>
+
 
 
 	<script type="text/javascript">
