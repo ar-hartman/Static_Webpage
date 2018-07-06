@@ -16,7 +16,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-<body>
+<body onload="setPositions()" onresize="setPositions()">
 	<div id="container">
 		<div id="header">
 			<div id="nav">
@@ -28,7 +28,7 @@
 					<a href="capabilities.html"><li>capabilities</li></a>				
 				</ul>
 			</div>
-			<table>
+			<table id="nav-table">
 				<tr>
 					<td id="left-table"><a href="home.html">raven</a></td>
 					<td></td>
@@ -76,7 +76,13 @@
 
 
 	<script type="text/javascript">
+		document.getElementsByTagName("BODY")[0].onload = function() {setPositions()};
 		document.getElementsByTagName("BODY")[0].onresize = function() {windowSizeFunction()};
+		window.addEventListener("resize", function(){
+			setPositions();
+		})
+
+
 		var size = 0;
 
 		function windowSizeFunction(){
@@ -102,11 +108,42 @@
 				for (i = 0; i < number; i++){
 					document.getElementsByClassName("nav-drop")[i].style.display = "table-row";
 				}
+				positionTopBorder();
+				adjustBody();
 			} else {
 				for (i = 0; i < number; i++){
 					document.getElementsByClassName("nav-drop")[i].style.display = "none";
 				}
+				positionTopBorder();
+				adjustBody();
 			}
+		}
+		function setPositions(){
+			positionTopBorder();
+			adjustBody();
+			positionBottomBorder();
+		}
+		function positionTopBorder(){
+			var headHeight = document.getElementById('header').clientHeight;
+			console.log(headHeight);
+			document.getElementById("border-top").style.top = headHeight + "px";
+		}
+		function positionBottomBorder(){
+			var footHeight = document.getElementById('footer').clientHeight;
+			document.getElementById("border-bottom").style.bottom = footHeight + "px";
+		}
+		function adjustBody(){
+			var windowHeight = document.getElementById('container').clientHeight;
+			console.log(windowHeight + " window height");
+			var headHeight = document.getElementById('header').clientHeight;
+			var topBorderHeight = document.getElementById('border-top').clientHeight;
+			var bottomBorderHeight = document.getElementById('border-bottom').clientHeight;
+			var footHeight = document.getElementById('footer').clientHeight;
+
+			var newBodyHeight = windowHeight - headHeight - topBorderHeight - bottomBorderHeight - footHeight;
+			console.log(newBodyHeight + " new nody height");
+			document.getElementById("b").style.height = newBodyHeight + "px";
+			document.getElementById("b").style.top = headHeight + topBorderHeight + "px";
 		}
 	</script>
 </body>
