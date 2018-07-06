@@ -39,28 +39,17 @@ var windowWidth = getWindowWidth();
 
 /********************************************************************************************************************/
 
+		/*
+		*	Controlling Functions
+		*/
+
 		document.getElementsByTagName("BODY")[0].onload = function() {setPositions()};
-		document.getElementsByTagName("BODY")[0].onresize = function() {windowSizeFunction()};
 		window.addEventListener("resize", function(){ setPositions(); });
 
 
-		var windowWidth = 0;
-
-		function windowSizeFunction(){
-			windowWidth = document.getElementById('container').clientWidth;
-			console.log(windowWidth + "window width")
-
-			if (windowWidth <= 768) { // smartphones
-				document.getElementById("LI-icon").style.width = "40px";
-			} else if (windowWidth <= 992) { // small devices, tablets
-				document.getElementById("LI-icon").style.width = "40px";
-			} else if (windowWidth <= 1200) { // medium devices
-				document.getElementById("LI-icon").style.width = "40px";
-			} else { // large devices
-				document.getElementById("LI-icon").style.width = "40px";
-			}
-		}
-
+		/*
+		*	Tactical Functions
+		*/
 
 		function dropdown(){
 			var number = document.getElementsByClassName("nav-drop").length;
@@ -85,6 +74,7 @@ var windowWidth = getWindowWidth();
 			positionBottomBorder();
 			positionNavLarge();
 			positionNavDrop();
+			setWidth();
 		}
 		/*
 		*	This function is used to set the position for the top border of this page.
@@ -116,8 +106,6 @@ var windowWidth = getWindowWidth();
 			document.getElementById("border-bottom").style.width = getWindowWidth() + "px";
 			document.getElementById("footer").style.width = getWindowWidth() + "px";
 		}
-
-
 		function positionNavLarge(){
 			var element = document.getElementById("nav-table-large");
 			style = window.getComputedStyle(element);
@@ -129,8 +117,6 @@ var windowWidth = getWindowWidth();
 				document.getElementById("nav-table-large").style.top = navTop + "px";
 			}
 		}
-
-
 		function positionNavDrop(){
 			var element = document.getElementById("nav-table");
 			style = window.getComputedStyle(element);

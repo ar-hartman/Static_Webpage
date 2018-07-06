@@ -63,13 +63,8 @@ html,body {
 	color: grey;
 	background-color: black;
 }
-
 #LI-icon {
-	position: absolute;
-	display: block;
-	right: 0px;
 	width: 40px;
-	padding: 1%;
 }
 #home {
 	font-size: 25px;
@@ -110,11 +105,25 @@ html,body {
 	width: 12.5%;
 	text-align: center;
 }
+#footer-table{
+	position: relative;
+	top: 25px;
+	width: 100%;
+	text-align: center;
+}
+#left-footer{
+	width: 25%;
+}
+#copyright {
+	color: grey;
+	width: 50%;
+}
+#social {
+	width: 25%;
+	vertical-align: top;
+}
 
 @media only screen and (max-width: 768px){
-	#LI-icon {
-		width: 50px;
-	}
 	#nav-table-large {
 		display: none;
 	}
